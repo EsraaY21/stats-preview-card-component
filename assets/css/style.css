@@ -6,7 +6,7 @@
     --blue_100: #0A0C1C;
     --blue_200: #1B1937;
     --purple: #AB5CDB;
-    --text: rgba(255,255,255,0.75);
+    --text: rgba(255, 255, 255, 0.75);
 }
 
 body {
@@ -18,42 +18,33 @@ body {
 
     background-color: var(--blue_100);
 
-    padding: 88px 24px;
+    padding: 5.5rem 1.5rem;
 
     color: var(--text);
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
     font-weight: 400;
 }
 
 .card {
     width: 100%;
-    min-width: 446px;
 
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow: hidden;
 
     background-color: white;
-    box-shadow: 0px 20px 20px -10px rgba(23, 25, 41, 0.2);
+    box-shadow: 0rem 1.25rem 1.25rem -0.625rem rgba(23, 25, 41, 0.2);
 
     display: flex;
     flex-wrap: wrap;
     background-color: var(--blue_200);
 }
 
-
 .content,
 .image {
     width: 50%;
 }
 
-@media (max-width: 768px) {
-
-    .content,
-    .image {
-        width: 100%;
-    }
-}
 
 .image {
     position: relative;
@@ -69,22 +60,17 @@ body {
     width: 100%;
     height: 100%;
     background-color: var(--purple);
-    mix-blend-mode: multiply; 
+    mix-blend-mode: multiply;
     opacity: 75.11%;
-  }
-
-.content {
-    padding-top: 72px;
-    padding-left: 72px;
-    padding-bottom: 60px;
-    padding-right: 95px;
 }
 
+
+
 h1 {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
     color: white;
 }
 
@@ -92,31 +78,79 @@ h1 span {
     color: var(--purple);
 }
 
-p.title_sub
-{
-    margin-bottom: 72px;
+p.title_sub {
+    margin-bottom: 4.5rem;
 }
 
-.stats 
-{
+.stats {
     display: flex;
     justify-content: space-between;
 }
 
-.stats h2 
-{
+.stats h2 {
     color: white;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 2px;
+    margin-bottom: 0.125rem;
 }
 
-.stats p 
-{
+.stats p {
     color: var(--text);
-    font-family: "Lexend Deca" , "sans-serif";
-    line-height: 25px;
-    letter-spacing: 1px;
-    font-size: 12px;
+    font-family: "Lexend Deca", "sans-serif";
+    line-height: 1.5625rem;
+    letter-spacing: 0.0625rem;
+    font-size: 0.75rem;
     text-transform: uppercase;
+}
+
+
+
+@media (min-width: 769px) {
+
+    .card {
+        min-width: 27.875rem;
+    }
+
+    .content {
+        padding-top: 4.5rem;
+        padding-left: 4.5rem;
+        padding-bottom: 3.75rem;
+        padding-right: 5.9375rem;
+    }
+}
+
+
+/* Mobile Version  */
+@media (max-width: 768px) {
+    .content,
+    .image {
+        width: 100%;
+        
+    }
+
+    .image {
+        height: 327px;
+        order: -1; 
+    }
+
+    .content {
+        padding: 2rem
+    }
+
+    h1, .title_sub
+    {
+        text-align: center;
+    }
+
+    .stats 
+    {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .stats div
+    {
+        width: 100%;
+        text-align: center;
+    }
 }
